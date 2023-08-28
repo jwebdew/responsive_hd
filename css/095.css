@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import url(reset.css);
+
+.cont01 .inner .item {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.cont01 .inner .item img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .inner .item div {
+    width: 50%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* 두번째 item안에 있는 img와 div
+앞뒤순서변경
+img한테 추가해주기 */
+.cont01 .inner .item:nth-child(2) img {
+    order: 1;
+}
+ 
+
+/* 화면크기 767px이하일 때
+이미지 텍스트순으로 배치 */
+@media screen and (max-width:767px) {
+    .cont01 .inner .item {
+        /* display: block; */
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .cont01 .inner .item img {
+        width: 100%;
+        height: 400px;
+    }
+    .cont01 .inner .item div {
+        width: 100%;
+    }
+    .cont01 .inner .item:nth-child(2) img {
+        order: 0;
+    }
+}

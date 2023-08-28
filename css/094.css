@@ -1,0 +1,61 @@
+@charset "utf-8";
+@import url(reset.css);
+/* common.css */
+
+.cont01 {
+    background-color: rgb(255, 213, 86);
+    padding: 100px 0;
+}
+.cont01 .inner {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cont01 .inner div {
+    width: 32%;
+    height: 300px;
+    border: 2px solid #000;
+    position: relative;
+}
+.cont01 .inner div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .inner div a {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: none;
+}
+.cont01 .inner div:hover a {
+    display: block;
+}
+
+@media screen and (max-width:1024px) {
+    .cont01 .inner div {
+        width: 49%;
+        height: auto;/* 높이없음 */
+    }
+    .cont01 .inner div img {
+        height: 300px;
+    }
+    .cont01 .inner div a {
+        width: 100%;
+        display: block;
+        position: static;
+        transform: translate(0, 0);
+    }
+
+}
